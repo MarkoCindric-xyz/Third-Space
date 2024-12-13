@@ -1,0 +1,9 @@
+# SCsub
+
+Import('env')
+
+env.Append(CPPPATH=["/usr/local/include"]) # Include FFTW
+env.Append(LIBPATH=["/usr/local/lib"])
+env.Append(LIBS=['fftw3'])
+
+env.add_source_files(env.modules_sources, "*.cpp") # Add all cpp files to the build
